@@ -18,7 +18,7 @@ import java.util.List;
 public class CodeGenerator {
 
     // JDBC配置，请修改为你项目的实际配置
-    private static final String JDBC_URL = "jdbc:mysql://localhost:8080/stuinfo?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&transformedBitIsBoolean=true&autoReconnect=true&failOverReadOnly=false";
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/gis_db?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&transformedBitIsBoolean=true&autoReconnect=true&failOverReadOnly=false";
     private static final String JDBC_USERNAME = "root";
     private static final String JDBC_PASSWORD = "houjiawei";
     private static final String JDBC_DIVER_CLASS_NAME = "com.mysql.cj.jdbc.Driver";
@@ -31,7 +31,7 @@ public class CodeGenerator {
      * @param args
      */
     public static void main(String[] args) {
-        genCode("system_log");
+        genCode("case_info");
     }
 
     /**
