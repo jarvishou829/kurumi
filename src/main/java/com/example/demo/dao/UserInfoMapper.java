@@ -6,4 +6,8 @@ import org.apache.ibatis.annotations.Param;
 public interface UserInfoMapper {
 
     UserInfo selectById(@Param("id") Integer id);
+
+    Integer insertByUserName(@Param("userName") String userName);
+
+    Integer deleteByUserName(@Param("userName") String userName);
 }

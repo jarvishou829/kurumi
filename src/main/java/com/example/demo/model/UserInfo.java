@@ -20,10 +20,9 @@ public class UserInfo {
     /**
      * 用户名
      */
-    @Column(name = "user_name")
+    @Column(name = "userName")
     private String userName;
 
-    private String password;
 
     public String getId() {
         return id;
@@ -39,14 +38,6 @@ public class UserInfo {
 
     public void setUserName(String userName) {
         this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
 }

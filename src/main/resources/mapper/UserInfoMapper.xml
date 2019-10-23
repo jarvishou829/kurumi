@@ -3,11 +3,11 @@
 <mapper namespace="com.example.demo.dao.UserInfoMapper">
     <resultMap id="BaseResultMap" type="com.example.demo.model.UserInfo">
         <id column="id" jdbcType="INTEGER" property="id"/>
-        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="userName" jdbcType="VARCHAR" property="userName"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-      id,user_name
+      id,userName
     </sql>
 
     <select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
@@ -16,5 +16,15 @@
         from user_info
         where id = #{id,jdbcType=VARCHAR}
     </select>
+
+    <insert id="insertByUserName" parameterType="com.example.demo.model.UserInfo">
+        insert into user_info
+        values (null,#{userName})
+    </insert>
+
+    <delete id="deleteByUserName" parameterType="com.example.demo.model.UserInfo">
+        delete from user_info
+        where userName = #{userName}
+    </delete>
 
 </mapper>

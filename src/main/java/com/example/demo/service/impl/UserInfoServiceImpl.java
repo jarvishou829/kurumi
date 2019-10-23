@@ -28,4 +28,22 @@ public class UserInfoServiceImpl implements UserInfoService{
         }
         return userInfo;
     }
+
+    @Override
+    public Integer insertByUserName(String userName){
+        Integer state = userInfoMapper.insertByUserName(userName);
+        if(state == null){
+            throw new ServiceException("插入未成功");
+        }
+        return state;
+    }
+
+    @Override
+    public Integer deleteByUserName(String userName){
+        Integer state = userInfoMapper.deleteByUserName(userName);
+        if(state == null){
+            throw new ServiceException("删除失败");
+        }
+        return state;
+    }
 }

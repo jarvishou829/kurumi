@@ -11,4 +11,8 @@ public interface UserInfoService {
 
     UserInfo selectById(Integer id);
 
+    Integer insertByUserName(String userName);
+
+    Integer deleteByUserName(String userName);
+
 }

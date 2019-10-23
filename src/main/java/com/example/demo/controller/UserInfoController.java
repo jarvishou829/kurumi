@@ -43,5 +43,15 @@ public class UserInfoController {
         return RetResponse.makeOKRsp(userInfo);
     }
 
+    @PostMapping("/insertByUserName")
+    public RetResult<Integer> insertByUserName(String userName){
+        Integer state = userInfoService.insertByUserName(userName);
+        return RetResponse.makeOKRsp(state);
+    }
 
+    @PostMapping("/deleteByUserName")
+    public RetResult<Integer> deleteByUserName(String userName){
+        Integer state = userInfoService.deleteByUserName(userName);
+        return RetResponse.makeOKRsp(state);
+    }
 }
