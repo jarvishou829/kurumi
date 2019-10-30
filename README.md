@@ -9,3 +9,6 @@
 
 ### version 2.1 (2019-10-23)
 在user_info方法类中实现了insert与delete语句，语句内容与返回值过程原理与原来的select有所区别。
+
+### version 2.2 (2019-10-30)
+在src中加入jQuery与test测试前端跨域请求，添加filter包在其中添加CorsFilter类以实现跨域过滤器。
