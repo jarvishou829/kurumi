@@ -11,12 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.List;
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 
 /**
  * @author 张瑶
  * @Description:
  * @time 2018/4/18 11:39
  */
+@CrossOrigin
 @RestController
 @RequestMapping("userInfo")
 public class UserInfoController {
